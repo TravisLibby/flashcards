@@ -103,6 +103,9 @@ class Quiz extends Component {
           <TouchableOpacity style={styles.btn} onPress={() => resetQuiz()}>
             <Text>Retake Quiz</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.navigate('DeckDetail', deck)}>
+            <Text>Return to Deck</Text>
+          </TouchableOpacity>
         </View>
       }
       </View>
