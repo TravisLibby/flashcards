@@ -14,6 +14,7 @@ class NewDeck extends Component {
       .then((deck) => {
         this.props.dispatch(receiveDeck(deck));
         this.setState({title: ''});
+        this.props.navigation.navigate('DeckDetail', {title: Object.keys(deck)[0]});
       });
   };
 

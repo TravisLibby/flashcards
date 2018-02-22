@@ -26,9 +26,11 @@ class DeckDetail extends Component {
           <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('AddCard', {deck})}>
             <Text>Add Card</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Quiz', {deck})}>
-            <Text>Start Quiz</Text>
-          </TouchableOpacity>
+          {numCards > 0 &&
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Quiz', {deck})}>
+              <Text>Start Quiz</Text>
+            </TouchableOpacity>
+          }
         </View>
       </View>
     );
