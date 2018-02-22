@@ -21,6 +21,7 @@ class AddCard extends Component {
             answer: ''
           };
         });
+        this.props.navigation.navigate('DeckDetail', this.props.navigation.state.params.deck)
     });
   };
 
